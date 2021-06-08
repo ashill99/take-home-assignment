@@ -12,9 +12,7 @@ function App() {
 
   const handleSubmit = event => {
     event.preventDefault();
-    activeMode === 'upper' ?
-      setTextOutput(textInput.toUpperCase()) 
-      : setTextOutput(textInput.toLowerCase());
+    activeMode === 'upper' ? setTextOutput(textInput.toUpperCase()) : setTextOutput(textInput.toLowerCase());
   };
 
   const handleOutputClick = event => {
@@ -28,8 +26,20 @@ function App() {
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
       <div className="mode-buttons">
-        <button className={activeMode === 'upper' ? 'active' : 'inactive'} value="upper" onClick={handleOutputClick}>Upper</button>
-        <button className={activeMode === 'upper' ? 'inactive' : 'active'} value="lower" onClick={handleOutputClick} >Lower</button>
+        <button 
+          className={activeMode === 'upper' ? 'active' : 'inactive'} 
+          value="upper" 
+          onClick={handleOutputClick}
+        >
+          Upper
+        </button>
+        <button 
+          className={activeMode === 'upper' ? 'inactive' : 'active'} 
+          value="lower" 
+          onClick={handleOutputClick} 
+        >
+          Lower
+        </button>
       </div>
       <form onSubmit={handleSubmit}>
         <label>
