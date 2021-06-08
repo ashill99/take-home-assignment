@@ -30,3 +30,13 @@ textarea {
     text-align: left;
     white-space: pre;
 }
+
+.mode-buttons {
+}
+
+.active {
+    background-color: #282c34;
+    color: white;
+}
+
+
